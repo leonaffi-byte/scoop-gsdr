@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "description": "GSD Reloaded - Autonomous spec-driven development for Claude Code",
+  "homepage": "https://github.com/leonaffi-byte/gsdr",
+  "license": "MIT",
+  "depends": "nodejs",
+  "installer": {
+    "script": [
+      "npm install -g gsdr@$version",
+      "gsdr"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "gsdr --uninstall",
+      "npm uninstall -g gsdr"
+    ]
+  },
+  "checkver": {
+    "url": "https://registry.npmjs.org/gsdr",
+    "jsonpath": "$['dist-tags'].latest"
+  },
+  "autoupdate": {
+    "url": "https://registry.npmjs.org/gsdr/-/gsdr-$version.tgz"
+  }
+}
